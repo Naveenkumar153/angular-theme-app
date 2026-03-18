@@ -1,59 +1,69 @@
-# ThemeApp
+# Summary Exercise - Theme an entire application
+## Objective
+In this exercise, you'll transform a grayscale, hard-coded application into a fully themable one using CSS palettes. The goal is to create a flexible color system that supports both neutral and primary palettes, as well as semantic palettes for notifications.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.1.
+1. The application will support a primary palette
+2. The application will support light and dark modes
+3. The application will support semantic palettes for specific components 
 
-## Development server
 
-To start a local development server, run:
+## Introduction to the application
+In this application we are using the following components:
+1. **App component**: divides the screen into 3 sections: toolbar, skill items, and notifications
+2. **Toolbar**: presents a title and a few routing buttons
+3. **Activity Card**: presents an activity card, with title, badge, description, some properties, and an action button
+4. **Notification**: presents a notification card, with message, and a timestamp.
 
-```bash
-ng serve
+Currently, all components use **grayscale** colors, hard-coded into the CSS.
+
+## Your Task
+1. **Create Two Base Palettes:**
+   - **Neutral Palette** – For grayscale elements.
+   - **Primary Palette** – Based on a single base color with varying shades.
+
+2. **Apply Palettes:**
+   - Use a combination of both palettes for most parts of the application.
+   - Ensure elements blend the neutral and primary palettes smoothly.
+
+3. **Theming the Notification Cards:**
+   - In the notification component ScSS, there are rules for different notification status 
+```scss
+&.info {
+
+}
+
+&.warning {
+
+}
+
+&.error {
+
+}
+
+&.success {
+
+}
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+   - Use these rules to set a new base color for the primary palette
 
-## Code scaffolding
+   | **Notification Type** | **Palette Color** |
+   |-----------------------|------------------|
+   | Error                 | Red              |
+   | Success               | Green            |
+   | Warning               | Yellow           |
+   | Info                  | Blue             |
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+4. Support light and dark mode
 
-```bash
-ng generate component component-name
-```
+- Add support for both light and dark theme, so you can control the color mode using the system settings
+- Adapt both the neutral and primary palettes to the selected color scheme
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Success Criteria
+- The application is fully themable by changing a **single custom property** for the primary palette.
+- Semantic palettes for notifications respond correctly to their status.
+- Grayscale and primary colors mix naturally in the main layout and activity cards.
+- Notification cards use their respective semantic palettes.
+- Dark and Light mode are both supported
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Happy theming!
