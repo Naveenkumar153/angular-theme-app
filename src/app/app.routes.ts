@@ -7,8 +7,8 @@ import { TopicComponent } from './pages/topic/topic.component';
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
-    { path: 'post/:id', component: PostDetailComponent },
-    { path: 'author/:id', component: AuthorDetailComponent },
-    { path: 'topic/:topic', component: TopicComponent },
+    // { path: 'post/:id', component: PostDetailComponent },
+    // { path: 'author/:id', component: AuthorDetailComponent },
+    // { path: 'topic/:topic', component: TopicComponent },
     { path: '**', redirectTo: '/home' }
 ];

@@ -10,5 +10,5 @@ import { Theme } from './service/theme';
   styleUrl: './app.scss'
 })
 export class App {
-  readonly themeService = inject(Theme);
+  // readonly themeService = inject(Theme);
 }
