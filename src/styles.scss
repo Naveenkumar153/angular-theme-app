@@ -1,3 +1,62 @@
+
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+@use 'naveen_theme-colors' as naveen_colors;
+@import './styles/naveen-theme.css';
+// @import './styles/naveen-theme.scss';
+
+* , *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+
+html, body { height: 100%; }
+body { 
+  color-scheme: light;
+  padding: 1rem;
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background: var(--mat-sys-background);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  @include mat.theme((
+    color: mat.$azure-palette, 
+    typography: Roboto, 
+    density: 0
+  ));
+
+  --sys-density-padding: var(--mat-form-field-container-vertical-padding, 16px);
+
+}
+
+// .theme-1 {
+//   color: #21864c;
+//   color: #d91845;
+//   color: #db8f1e;
+// }
+
+.theme-2 {
+  @include mat.theme((
+    color: naveen_colors.$primary-palette,
+  ));
+}
+
+
+
+
 // @use 'common-buttons' as btn;
 // @use 'syntax-highlight' as stx;
 // @use 'theme';
@@ -48,3 +107,8 @@
 //   -moz-osx-font-smoothing: grayscale;
 // }
 
+// .color { 
+//   color: #d91845;
+//   color: #21864c;
+//   color: #db8f1e;
+// }

@@ -1,3 +1,22 @@
+
+:host{
+    h1{
+        color: var(--mat-sys-secondary);
+    }
+}
+
+
+// .card { width:200px; padding:20px; border:2px solid #000; box-sizing: border-box; }
+// /* if ::after had its own padding/border and box-sizing wasn't set,
+//    its sizing could behave differently and affect layout */
+// .card::after { content:""; display:block; height:10px; border-top:5px solid red; }
+
+
+// .box { width:200px; padding:20px; border:2px solid #000; margin:8px 0; }
+// .content { box-sizing: content-box; } /*
+//  total width = 200 + 40 + 4 = 244px */
+// .border  { box-sizing: border-box;  } /* total width = 200px (includes padding+border) */
+
 // :host {
 //   .main-nav {
 //     background: var(--p-10);
