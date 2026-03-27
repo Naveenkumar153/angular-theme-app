@@ -5,9 +5,12 @@
 // Learn more about theming and how to use it for your application's
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
+@use 'fonts';
 @use 'naveen_theme-colors' as naveen_colors;
 @import './styles/naveen-theme.css';
 // @import './styles/naveen-theme.scss';
+
+// @include fonts.fonts();
 
 * , *::before, *::after {
   box-sizing: border-box;
@@ -21,7 +24,7 @@ html, body { height: 100%; }
 body { 
   color-scheme: light;
   padding: 1rem;
-  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  // font-family: Roboto, "Helvetica Neue", sans-serif; 
   background: var(--mat-sys-background);
 }
 

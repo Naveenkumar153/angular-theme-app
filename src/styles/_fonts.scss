@@ -1,0 +1,32 @@
+
+@mixin fonts(){
+    @font-face {
+        font-family: 'Roboto';
+        src: url('../../public/font/Roboto.woff2') format('woff2');
+        font-weight: 100 400 700 900;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Material Icons';
+        src: url('../../public/icons/Material-Rounded-Icons.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    .material-icons{
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+    }
+}
